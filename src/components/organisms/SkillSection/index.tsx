@@ -26,7 +26,7 @@ const SkillsSection: React.FC = () => {
         <div className="mt-16">
           <h3 className="text-3xl font-bold text-white mb-8 text-center">Technologies I Work With</h3>
           <div className="flex flex-wrap justify-center gap-4">
-            {['JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js', 'Python', 'Docker', 'Kubernetes', 'AWS', 'Git', 'GraphQL', 'REST APIs'].map((tech, i) => (
+            {['JavaScript', 'TypeScript', 'React', 'Spring Boot', 'Node.js', 'Python', 'Docker', 'Kubernetes', 'AWS', 'Git', 'GraphQL', 'REST APIs'].map((tech, i) => (
               <span key={i} className="px-6 py-3 bg-gradient-to-r from-purple-600/20 to-blue-600/20 text-white rounded-full border border-purple-500/30 hover:border-purple-500 transition-all hover:scale-110">
                 {tech}
               </span>
