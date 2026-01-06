@@ -20,7 +20,7 @@ const AboutSection: React.FC = () => (
           </p>
 
           <div className="flex gap-4 pt-6">
-            <Button variant="primary">Download CV</Button>
+            <Button variant="primary"  >Download CV</Button>
             <Button variant="secondary">Learn More</Button>
           </div>
         </div>

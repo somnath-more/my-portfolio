@@ -59,9 +59,9 @@ const ContactSection: React.FC = () => {
           </div>
 
           <div className="mt-8 pt-8 border-t border-white/10 flex justify-center gap-8">
-            <a href="mailto:john@example.com" className="flex items-center gap-2 text-white/70 hover:text-purple-400 transition-colors">
+            <a href="mailto:somnathmore8383@gmail.com" className="flex items-center gap-2 text-white/70 hover:text-purple-400 transition-colors">
               <Mail size={20} />
-              <span>john@example.com</span>
+              <span>somnathmore8383@gmail.com</span>
             </a>
           </div>
         </Card>
