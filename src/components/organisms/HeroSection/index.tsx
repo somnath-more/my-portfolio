@@ -3,9 +3,9 @@ import Button from "../../atoms/button/Button";
 import { useEffect, useState } from "react";
 
 const HeroSection: React.FC = () => {
-  const [text, setText] = useState('');
-  const fullText = 'Full Stack Developer';
-  
+  const [text, setText] = useState("");
+  const fullText = "Full Stack Developer";
+
   useEffect(() => {
     let i = 0;
     const timer = setInterval(() => {
@@ -20,46 +20,87 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-pink-900/20 to-blue-900/20">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500/30 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-pink-500/30 rounded-full blur-3xl animate-pulse delay-700" />
-      </div>
+    <section className="min-h-screen flex items-center justify-center relative bg-white dark:bg-slate-900">
+      {/* Subtle background layer */}
+      <div className="absolute inset-0 bg-[#f5f5f5] dark:bg-slate-800" />
 
       <div className="relative z-10 text-center px-6 max-w-5xl">
-        <div className="mb-8 inline-block">
-          <div className="w-32 h-32 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-5xl font-bold text-white shadow-2xl shadow-purple-500/50 animate-bounce">
+        {/* Avatar */}
+        <div className="mb-8 inline-flex justify-center">
+          <div
+            className="w-28 h-28 rounded-full bg-slate-900 dark:bg-slate-100 
+                      flex items-center justify-center 
+                      text-4xl font-semibold 
+                      text-white dark:text-slate-900
+                      border border-slate-200 dark:border-slate-700"
+          >
             SM
           </div>
         </div>
-        
-        <h1 className="text-6xl md:text-8xl font-bold mb-6 text-white">
+
+        {/* Name */}
+        <h1
+          className="text-4xl md:text-6xl font-semibold mb-4 
+                   text-slate-900 dark:text-slate-100"
+        >
           Somnath More
         </h1>
-        
-        <p className="text-3xl md:text-4xl mb-8 text-purple-400 font-semibold h-12">
-          {text}<span className="animate-pulse">|</span>
+
+        {/* Role / Typing text */}
+        <p
+          className="text-lg md:text-xl mb-6 
+                  text-slate-600 dark:text-slate-400 
+                  h-8"
+        >
+          {text}
+          <span className="opacity-50">|</span>
         </p>
-        
-        <p className="text-xl md:text-2xl text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed">
-          Crafting beautiful digital experiences with modern technologies and creative solutions
+
+        {/* Description */}
+        <p
+          className="text-base md:text-lg 
+                  text-slate-600 dark:text-slate-400 
+                  mb-10 max-w-3xl mx-auto leading-relaxed"
+        >
+          Crafting beautiful digital experiences with modern technologies and
+          clean, scalable solutions.
         </p>
-        
+
+        {/* Actions */}
         <div className="flex gap-4 justify-center flex-wrap">
           <Button variant="primary">View My Work</Button>
           <Button variant="secondary">Get In Touch</Button>
         </div>
 
+        {/* Socials */}
         <div className="flex gap-6 justify-center mt-12">
-          <a href="#" className="text-white/70 hover:text-purple-400 transition-colors transform hover:scale-110">
-            <Github size={28} />
+          <a
+            href={"https://github.com/somnath-more"}
+            target="_blank"
+            className="text-slate-500 dark:text-slate-400 
+                   hover:text-slate-900 dark:hover:text-slate-100
+                   transition-colors"
+          >
+            <Github size={24} />
           </a>
-          <a href="#" className="text-white/70 hover:text-purple-400 transition-colors transform hover:scale-110">
-            <Linkedin size={28} />
+          <a
+            href={"https://www.linkedin.com/in/somnathmore83/"}
+            target="_blank"
+            className="text-slate-500 dark:text-slate-400 
+                   hover:text-slate-900 dark:hover:text-slate-100
+                   transition-colors"
+          >
+            <Linkedin size={24} />
           </a>
-          <a href="#" className="text-white/70 hover:text-purple-400 transition-colors transform hover:scale-110">
-            <Mail size={28} />
+          <a
+            target="_blank"
+
+
+            className="text-slate-500 dark:text-slate-400 
+                   hover:text-slate-900 dark:hover:text-slate-100
+                   transition-colors"
+          >
+            <Mail size={24} />
           </a>
         </div>
       </div>
@@ -67,4 +108,4 @@ const HeroSection: React.FC = () => {
   );
 };
 
-export default HeroSection
+export default HeroSection;

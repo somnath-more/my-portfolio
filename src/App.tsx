@@ -39,11 +39,12 @@ const App: React.FC = () => {
         <ContactSection />
       </div>
 
-      <footer className="bg-black/50 backdrop-blur-lg py-8 text-center border-t border-white/10">
-        <p className="text-white/70">
-          © 2025 Somnath More. Built with React & TypeScript
-        </p>
-      </footer>
+      <footer className="py-8 border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950">
+  <p className="text-sm text-zinc-600 dark:text-zinc-400 text-center">
+    © 2025 Somnath More. Built with React & TypeScript
+  </p>
+</footer>
+
     </div>
   );
 };

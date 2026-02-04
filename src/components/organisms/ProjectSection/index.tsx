@@ -31,21 +31,22 @@ const ProjectsSection: React.FC = () => {
   ];
 
   return (
-    <section className="min-h-screen flex items-center py-20 px-6">
-      <div className="max-w-6xl mx-auto w-full">
-        <SectionTitle>Featured Projects</SectionTitle>
-        
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, i) => (
-            <ProjectCard key={i} {...project} />
-          ))}
-        </div>
+<section className="min-h-screen flex items-center py-24 px-6 bg-zinc-50 dark:bg-zinc-950">
+  <div className="max-w-6xl mx-auto w-full">
+    <SectionTitle>Featured Projects</SectionTitle>
+    
+    <div className="grid md:grid-cols-2 gap-8">
+      {projects.map((project, i) => (
+        <ProjectCard key={i} {...project} />
+      ))}
+    </div>
 
-        <div className="text-center mt-12">
-          <Button variant="primary">View All Projects</Button>
-        </div>
-      </div>
-    </section>
+    <div className="text-center mt-16">
+      <Button variant="primary">View All Projects</Button>
+    </div>
+  </div>
+</section>
+
   );
 };
 export default ProjectsSection

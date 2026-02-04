@@ -1,16 +1,36 @@
 import type React from "react";
 
-const SkillBadge: React.FC<{ skill: string; level: number }> = ({ skill, level }) => (
+const SkillBadge: React.FC<{ skill: string; level: number }> = ({
+  skill,
+  level,
+}) => (
   <div className="group">
-    <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm px-6 py-3 rounded-xl border border-purple-500/30 transition-all duration-300 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/30">
-      <p className="text-white font-semibold">{skill}</p>
-      <div className="w-full bg-white/10 rounded-full h-2 mt-2">
-        <div 
-          className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full transition-all duration-1000"
+    <div
+      className="
+      px-6 py-4 rounded-xl
+      bg-white dark:bg-zinc-900
+      border border-zinc-200 dark:border-zinc-800
+      transition-colors
+      hover:bg-zinc-50 dark:hover:bg-zinc-800
+    "
+    >
+      {/* Skill name */}
+      <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
+        {skill}
+      </p>
+
+      {/* Progress track */}
+      <div className="w-full mt-3 h-2 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
+        <div
+          className="
+          h-full rounded-full
+          bg-zinc-900 dark:bg-zinc-100
+          transition-all duration-700
+        "
           style={{ width: `${level}%` }}
         />
       </div>
     </div>
   </div>
 );
-export default SkillBadge
+export default SkillBadge;
